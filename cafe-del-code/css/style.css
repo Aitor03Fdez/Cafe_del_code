@@ -1,0 +1,71 @@
+
+* {
+    /* Elimina el margen y el padding predeterminados del navegador */
+    margin: 0;
+    padding: 0;
+    /* Usa el modelo de caja de borde para un manejo más intuitivo del tamaño */
+    box-sizing: border-box;
+}
+
+body {
+    /* Define una fuente sans-serif legible como fuente principal */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Color de texto oscuro para asegurar la legibilidad */
+    color: #333; /* Un gris oscuro */
+    /* Puedes establecer un color de fondo claro si es necesario */
+    background-color: #f4f4f4; 
+}
+
+/*
+======================
+## 🏛️ Estilos del Encabezado (Header)
+======================
+*/
+header {
+    /* Color de fondo oscuro para el encabezado */
+    background-color: #222; /* Un gris casi negro */
+    /* Color de texto claro para contrastar con el fondo */
+    color: #fff;
+    /* Añade espacio interno para que el contenido no se pegue a los bordes */
+    padding: 1rem 0; /* 1rem arriba y abajo, 0 a los lados */
+    /* Alineación de texto central opcional */
+    text-align: center;
+}
+
+/*
+======================
+## 🧭 Estilos de Navegación (Nav)
+======================
+======================
+*/
+nav ul {
+    /* Usa Flexbox para alinear los elementos de la lista horizontalmente */
+    display: flex;
+    /* Centra los elementos horizontalmente (opcional) */
+    justify-content: center;
+    /* Elimina los puntos o viñetas de la lista */
+    list-style: none;
+    /* Quita el margen y padding predeterminados del <ul> */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    /* Añade espacio entre los elementos de navegación */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    /* Estilos para los enlaces dentro de la navegación */
+    color: #fff;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    /* Pequeño padding para hacer clic más fácil */
+    padding: 0.5rem 0;
+    /* Transición para un efecto de hover suave (opcional) */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    /* Cambia el color del texto al pasar el ratón */
+    color: #ffd700; /* Un color de acento, por ejemplo, dorado */
+}
