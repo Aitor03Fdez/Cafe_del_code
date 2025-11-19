@@ -69,3 +69,58 @@ nav ul li a:hover {
     /* Cambia el color del texto al pasar el ratón */
     color: #ffd700; /* Un color de acento, por ejemplo, dorado */
 }
+/* --- Estilos para la sección de menú --- */
+
+#menu {
+    /* Padding para espacio interior, Color de fondo oscuro */
+    padding: 60px 20px;
+    background-color: #1a1a1a; /* Ejemplo de color oscuro */
+    color: #ffffff; /* Aseguramos que el texto sea visible */
+}
+
+.menu-grid {
+    /* Display grid para organizar los items en columnas */
+    display: grid;
+    /* Espacio entre los elementos de la cuadrícula */
+    gap: 30px; 
+    /* Ejemplo: 3 columnas iguales */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+}
+
+.menu-item {
+    /* Borde, Padding, Fondo Oscuro */
+    border: 1px solid #333;
+    padding: 20px;
+    background-color: #222;
+    /* Efecto de transición para el hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+.menu-item:hover {
+    /* Efecto hover */
+    transform: translateY(-5px); /* Se levanta un poco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.price {
+    /* Color Dorado y Grosor de Fuente */
+    color: gold; /* O un valor hexadecimal como #FFD700 */
+    font-weight: bold;
+    display: block; /* Para que ocupe toda la línea y quede bien separado */
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Estilo para el h3 del producto */
+.menu-item h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+/* Estilo para la descripción */
+.menu-item p {
+    color: #ccc;
+    font-size: 0.9em;
+}
