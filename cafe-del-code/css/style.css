@@ -32,12 +32,56 @@ header {
     text-align: center;
 }
 
-/*
-======================
-## 🧭 Estilos de Navegación (Nav)
-======================
-======================
-*/
+#about {
+    /* Agrega relleno alrededor del contenido */
+    padding: 60px 20px;
+    /* Alinea el texto al centro */
+    text-align: center;
+    /* Fondo oscuro para la sección */
+    background-color: #1a1a1a; /* Un color gris muy oscuro */
+    /* Color de texto claro para que contraste con el fondo oscuro */
+    color: #ffffff; 
+}
+.valores {
+    /* Habilita Flexbox */
+    display: flex;
+    /* Distribuye el espacio entre los elementos y alrededor de ellos */
+    justify-content: space-around;
+    /* Permite que los elementos se envuelvan en la siguiente línea si no caben */
+    flex-wrap: wrap; 
+    /* Agrega un poco de margen superior/inferior para separarlo de otros elementos */
+    margin: 40px 0; 
+}
+
+.valor-item {
+    /* Relleno dentro de cada elemento */
+    padding: 25px;
+    /* Ancho máximo para que no se extiendan demasiado en pantallas grandes */
+    max-width: 300px; 
+    /* Margen para crear espacio entre los ítems */
+    margin: 15px;
+    /* Borde sutil y redondeado */
+    border: 1px solid #333;
+    border-radius: 8px;
+    /* Transición suave para el efecto hover */
+    transition: all 0.3s ease;
+    /* Sombra inicial sutil */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto al pasar el ratón (hover effect) */
+.valor-item:hover {
+    /* Cambio de fondo */
+    background-color: #333; 
+    /* Levantar el elemento un poco */
+    transform: translateY(-5px); 
+    /* Sombra más pronunciada */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Borde más brillante (opcional) */
+    border-color: #007bff; 
+}
+
+
 nav ul {
     /* Usa Flexbox para alinear los elementos de la lista horizontalmente */
     display: flex;
