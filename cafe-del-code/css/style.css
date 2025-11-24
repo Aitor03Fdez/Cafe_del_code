@@ -1,242 +1,270 @@
+ /* Reset y estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-* {
-    /* Elimina el margen y el padding predeterminados del navegador */
-    margin: 0;
-    padding: 0;
-    /* Usa el modelo de caja de borde para un manejo más intuitivo del tamaño */
-    box-sizing: border-box;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #1a1a1a;
+        }
 
-body {
-    /* Define una fuente sans-serif legible como fuente principal */
-    font-family: Arial, Helvetica, sans-serif;
-    /* Color de texto oscuro para asegurar la legibilidad */
-    color: #333; /* Un gris oscuro */
-    /* Puedes establecer un color de fondo claro si es necesario */
-    background-color: #f4f4f4; 
-}
+        /* Header y navegación */
+        header {
+            background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
 
-/*
-======================
-## 🏛️ Estilos del Encabezado (Header)
-======================
-*/
-header {
-    /* Color de fondo oscuro para el encabezado */
-    background-color: #222; /* Un gris casi negro */
-    /* Color de texto claro para contrastar con el fondo */
-    color: #fff;
-    /* Añade espacio interno para que el contenido no se pegue a los bordes */
-    padding: 1rem 0; /* 1rem arriba y abajo, 0 a los lados */
-    /* Alineación de texto central opcional */
-    text-align: center;
-}
+        header h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
 
-#about {
-    /* Agrega relleno alrededor del contenido */
-    padding: 60px 20px;
-    /* Alinea el texto al centro */
-    text-align: center;
-    /* Fondo oscuro para la sección */
-    background-color: #1a1a1a; /* Un color gris muy oscuro */
-    /* Color de texto claro para que contraste con el fondo oscuro */
-    color: #ffffff; 
-}
-.valores {
-    /* Habilita Flexbox */
-    display: flex;
-    /* Distribuye el espacio entre los elementos y alrededor de ellos */
-    justify-content: space-around;
-    /* Permite que los elementos se envuelvan en la siguiente línea si no caben */
-    flex-wrap: wrap; 
-    /* Agrega un poco de margen superior/inferior para separarlo de otros elementos */
-    margin: 40px 0; 
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
 
-.valor-item {
-    /* Relleno dentro de cada elemento */
-    padding: 25px;
-    /* Ancho máximo para que no se extiendan demasiado en pantallas grandes */
-    max-width: 300px; 
-    /* Margen para crear espacio entre los ítems */
-    margin: 15px;
-    /* Borde sutil y redondeado */
-    border: 1px solid #333;
-    border-radius: 8px;
-    /* Transición suave para el efecto hover */
-    transition: all 0.3s ease;
-    /* Sombra inicial sutil */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+            padding: 0.5rem 1rem;
+        }
 
-/* Efecto al pasar el ratón (hover effect) */
-.valor-item:hover {
-    /* Cambio de fondo */
-    background-color: #333; 
-    /* Levantar el elemento un poco */
-    transform: translateY(-5px); 
-    /* Sombra más pronunciada */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Borde más brillante (opcional) */
-    border-color: #007bff; 
-}
+        nav a:hover {
+            color: #D4A574;
+            transform: translateY(-2px);
+            text-shadow: 0 0 10px rgba(212, 165, 116, 0.5);
+        }
 
+        /* Sección Sobre Nosotros */
+        #about {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: #242424;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
 
-nav ul {
-    /* Usa Flexbox para alinear los elementos de la lista horizontalmente */
-    display: flex;
-    /* Centra los elementos horizontalmente (opcional) */
-    justify-content: center;
-    /* Elimina los puntos o viñetas de la lista */
-    list-style: none;
-    /* Quita el margen y padding predeterminados del <ul> */
-    margin: 0;
-    padding: 0;
-}
+        #about h2 {
+            text-align: center;
+            color: #D4A574;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
 
-nav ul li {
-    /* Añade espacio entre los elementos de navegación */
-    margin: 0 15px;
-}
+        #about h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #8B6F47;
+            margin: 0.5rem auto;
+            box-shadow: 0 0 10px rgba(139, 111, 71, 0.5);
+        }
 
-nav ul li a {
-    /* Estilos para los enlaces dentro de la navegación */
-    color: #fff;
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    /* Pequeño padding para hacer clic más fácil */
-    padding: 0.5rem 0;
-    /* Transición para un efecto de hover suave (opcional) */
-    transition: color 0.3s ease;
-}
+        #about p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-nav ul li a:hover {
-    /* Cambia el color del texto al pasar el ratón */
-    color: #ffd700; /* Un color de acento, por ejemplo, dorado */
-}
-/* --- Estilos para la sección de menú --- */
+        .valores {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
 
-#menu {
-    /* Padding para espacio interior, Color de fondo oscuro */
-    padding: 60px 20px;
-    background-color: #1a1a1a; /* Ejemplo de color oscuro */
-    color: #ffffff; /* Aseguramos que el texto sea visible */
-}
+        .valor-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 1.5rem;
+            background: #2a2a2a;
+            border-radius: 8px;
+            border: 1px solid #3a3a3a;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
 
-.menu-grid {
-    /* Display grid para organizar los items en columnas */
-    display: grid;
-    /* Espacio entre los elementos de la cuadrícula */
-    gap: 30px; 
-    /* Ejemplo: 3 columnas iguales */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-}
+        .valor-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(139, 111, 71, 0.3);
+            border-color: #8B6F47;
+        }
 
-.menu-item {
-    /* Borde, Padding, Fondo Oscuro */
-    border: 1px solid #333;
-    padding: 20px;
-    background-color: #222;
-    /* Efecto de transición para el hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-}
+        .valor-item h3 {
+            color: #D4A574;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
 
-.menu-item:hover {
-    /* Efecto hover */
-    transform: translateY(-5px); /* Se levanta un poco */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-}
+        .valor-item p {
+            color: #a0a0a0;
+        }
 
-.price {
-    /* Color Dorado y Grosor de Fuente */
-    color: gold; /* O un valor hexadecimal como #FFD700 */
-    font-weight: bold;
-    display: block; /* Para que ocupe toda la línea y quede bien separado */
-    margin-top: 10px;
-    font-size: 1.2em;
-}
+        /* Sección Menú */
+        #menu {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+        }
 
-/* Estilo para el h3 del producto */
-.menu-item h3 {
-    margin-top: 0;
-    color: #ffffff;
-}
+        #menu h2 {
+            text-align: center;
+            color: #D4A574;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
 
-/* Estilo para la descripción */
-.menu-item p {
-    color: #ccc;
-    font-size: 0.9em;
-}
-/* Estilos generales del Footer */
-footer {
-    /* Color de fondo muy oscuro y texto claro */
-    background-color: #121212; /* Un gris muy oscuro (casi negro) */
-    color: #f0f0f0; /* Texto blanco suave */
-    
-    /* Padding y text-align center */
-    padding: 40px 20px;
-    text-align: center;
-    
-    /* Display flex para las secciones */
-    display: flex;
-    flex-wrap: wrap; /* Permite que las secciones salten de línea en móviles */
-    justify-content: space-around; /* Distribuye el espacio entre las secciones */
-    gap: 20px; /* Espacio entre las columnas */
-}
+        #menu h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #8B6F47;
+            margin: 0.5rem auto;
+            box-shadow: 0 0 10px rgba(139, 111, 71, 0.5);
+        }
 
-/* Estilos para cada sección (Contacto, Horario, Síguenos, Copyright) */
-.footer-section {
-    /* Define un ancho base para las secciones, ajustándose al espacio disponible */
-    flex: 1; 
-    min-width: 150px; /* Asegura que no se hagan demasiado estrechas */
-    margin: 10px 0;
-    text-align: left; /* Alineamos el contenido de cada sección a la izquierda */
-}
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
 
-/* Títulos de las secciones */
-.footer-section h4 {
-    color: #ffffff; /* Títulos un poco más blancos */
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    border-bottom: 1px solid #333; /* Separador sutil */
-    padding-bottom: 5px;
-}
+        .menu-item {
+            background: #242424;
+            border: 2px solid #3a3a3a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
 
-/* Listas (ul) dentro de las secciones */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .menu-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(139, 111, 71, 0.4);
+            border-color: #8B6F47;
+            background: #2a2a2a;
+        }
 
-/* Elementos de lista (li) */
-.footer-section li {
-    margin-bottom: 8px;
-    font-size: 0.95em;
-}
+        .menu-item h3 {
+            color: #D4A574;
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
 
-/* Estilos de los enlaces (a) */
-footer a {
-    color: #b0b0b0; /* Un gris claro para los enlaces por defecto */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para el efecto hover */
-}
+        .menu-item p {
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
 
-/* Efectos hover en los enlaces */
-footer a:hover {
-    color: #4CAF50; /* Un color de acento brillante (verde) al pasar el mouse */
-    text-decoration: underline;
-    transform: translateY(-2px); /* Un ligero movimiento hacia arriba */
-}
+        .price {
+            display: block;
+            color: #8B6F47;
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: right;
+            text-shadow: 0 0 10px rgba(139, 111, 71, 0.3);
+        }
 
-/* Estilos específicos para la sección de Copyright */
-.copyright {
-    /* Ocupa todo el ancho en la parte inferior si es necesario */
-    flex-basis: 100%; 
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #333;
-    font-size: 0.9em;
-}
+        /* Footer */
+        footer {
+            background: #0f0f0f;
+            color: #e0e0e0;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 2px solid #2a2a2a;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            color: #D4A574;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #D4A574;
+            text-shadow: 0 0 10px rgba(212, 165, 116, 0.5);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #3a3a3a;
+            color: #8B6F47;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .valores {
+                flex-direction: column;
+            }
+        }
