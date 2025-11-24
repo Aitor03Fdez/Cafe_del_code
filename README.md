@@ -15,8 +15,4 @@ Este trabajo fue realizado por:
 * **Aitor**
 * **Juan Manuel**
 
----
 
-## 📝 Licencia
-
-Este proyecto está bajo la licencia [Añade aquí el tipo de licencia, por ejemplo: MIT].
