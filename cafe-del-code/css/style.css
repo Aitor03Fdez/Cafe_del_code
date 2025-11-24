@@ -168,3 +168,75 @@ nav ul li a:hover {
     color: #ccc;
     font-size: 0.9em;
 }
+/* Estilos generales del Footer */
+footer {
+    /* Color de fondo muy oscuro y texto claro */
+    background-color: #121212; /* Un gris muy oscuro (casi negro) */
+    color: #f0f0f0; /* Texto blanco suave */
+    
+    /* Padding y text-align center */
+    padding: 40px 20px;
+    text-align: center;
+    
+    /* Display flex para las secciones */
+    display: flex;
+    flex-wrap: wrap; /* Permite que las secciones salten de línea en móviles */
+    justify-content: space-around; /* Distribuye el espacio entre las secciones */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilos para cada sección (Contacto, Horario, Síguenos, Copyright) */
+.footer-section {
+    /* Define un ancho base para las secciones, ajustándose al espacio disponible */
+    flex: 1; 
+    min-width: 150px; /* Asegura que no se hagan demasiado estrechas */
+    margin: 10px 0;
+    text-align: left; /* Alineamos el contenido de cada sección a la izquierda */
+}
+
+/* Títulos de las secciones */
+.footer-section h4 {
+    color: #ffffff; /* Títulos un poco más blancos */
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    border-bottom: 1px solid #333; /* Separador sutil */
+    padding-bottom: 5px;
+}
+
+/* Listas (ul) dentro de las secciones */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Elementos de lista (li) */
+.footer-section li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+/* Estilos de los enlaces (a) */
+footer a {
+    color: #b0b0b0; /* Un gris claro para los enlaces por defecto */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transición suave para el efecto hover */
+}
+
+/* Efectos hover en los enlaces */
+footer a:hover {
+    color: #4CAF50; /* Un color de acento brillante (verde) al pasar el mouse */
+    text-decoration: underline;
+    transform: translateY(-2px); /* Un ligero movimiento hacia arriba */
+}
+
+/* Estilos específicos para la sección de Copyright */
+.copyright {
+    /* Ocupa todo el ancho en la parte inferior si es necesario */
+    flex-basis: 100%; 
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+}
